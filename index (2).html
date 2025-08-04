@@ -1,0 +1,125 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Queendom Consultancy</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #000;
+      color: #fff;
+    }
+    header {
+      text-align: center;
+      padding: 2em 1em;
+    }
+    header h1 {
+      color: #FFD700;
+      font-size: 2.5em;
+      margin: 0;
+    }
+    header h2 {
+      color: #FFD700;
+      margin: 0.5em 0 1.5em;
+    }
+    .btn {
+      background-color: #FFD700;
+      color: #000;
+      padding: 1em 2em;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+      display: inline-block;
+    }
+    .section {
+      padding: 3em 1.5em;
+      max-width: 800px;
+      margin: auto;
+    }
+    .section-title {
+      color: #FFD700;
+      font-size: 1.8em;
+      margin-bottom: 0.5em;
+    }
+    form {
+      background: #111;
+      padding: 2em;
+      border-radius: 10px;
+      margin-top: 2em;
+    }
+    label {
+      display: block;
+      margin-top: 1em;
+      font-weight: bold;
+      color: #FFD700;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 0.75em;
+      margin-top: 0.25em;
+      background: #222;
+      border: 1px solid #444;
+      color: #fff;
+      border-radius: 5px;
+    }
+    button {
+      margin-top: 1.5em;
+      background: #FFD700;
+      color: #000;
+      padding: 1em 2em;
+      border: none;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>QUEENDOM CONSULTANCY</h1>
+    <h2>Build Your Legacy. Lead with Purpose.</h2>
+    <a href="#intake" class="btn">Start Your Journey</a>
+  </header>
+
+  <section class="section" id="intake">
+    <h3 class="section-title">Client Intake Form</h3>
+    <form name="queendom-intake" method="POST" data-netlify="true"
+          action="https://formsubmit.co/royallagacysolutions@gmail.com?_next=https://queendomconsultancy.com/thank-you">
+      <input type="hidden" name="form-name" value="queendom-intake" />
+      <label>Full Name</label><input type="text" name="Full Name" required />
+      <label>Email</label><input type="email" name="Email" required />
+      <label>Business Name</label><input type="text" name="Business Name" />
+      <label>Services Needed</label>
+      <select name="Services Needed" multiple>
+        <option>Business Strategy</option>
+        <option>Remote HR Support</option>
+        <option>Funding Preparation</option>
+        <option>Onboarding System Setup</option>
+        <option>Partnership & Contracts</option>
+        <option>Legacy Planning</option>
+      </select>
+      <label>Fee Structure</label>
+      <select name="Fee Structure" required>
+        <option>Flat Rate Package</option>
+        <option>Hourly Support</option>
+        <option>Revenue Share / Equity</option>
+        <option>Request a Custom Quote</option>
+      </select>
+      <label>Resources Requested</label>
+      <select name="Resources Requested" multiple>
+        <option>Templates</option>
+        <option>Funding/Grant Lists</option>
+        <option>Admin/VA Services</option>
+        <option>Investor Readiness Kit</option>
+        <option>Partnership Kit</option>
+      </select>
+      <label>Additional Notes</label>
+      <textarea name="Additional Notes" rows="5"></textarea>
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+</body>
+</html>
