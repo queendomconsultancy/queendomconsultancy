@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Intake Form | Queendom Consultancy LLC</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #000;
+      color: gold;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+    }
+
+    .form-container {
+      background: rgba(0,0,0,0.8);
+      padding: 40px 30px;
+      border-radius: 16px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+      margin-top: 30px;
+      max-width: 350px;
+      width: 100%;
+    }
+
+    .logo {
+      width: 100px;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      font-size: 2rem;
+    }
+
+    label {
+      display: block;
+      text-align: left;
+      margin-bottom: 8px;
+      font-weight: 600;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      border-radius: 6px;
+      border: none;
+      margin-bottom: 20px;
+      font-size: 1rem;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 60px;
+    }
+
+    .btn {
+      width: 100%;
+      background-color: gold;
+      color: black;
+      border: none;
+      padding: 12px 0;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #ffd700;
+    }
+
+    .back-link {
+      color: gold;
+      text-decoration: underline;
+      display: block;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <a class="back-link" href="index.html">&larr; Back to Home</a>
+  <div class="form-container">
+    <img class="logo" src="logo-queendom-consultancy.png" alt="Queendom Logo" />
+    <h2>Intake Form</h2>
+    <form id="intakeForm">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" required></textarea>
+
+      <button class="btn" type="submit">Submit</button>
+    </form>
+  </div>
+  <script>
+    document.getElementById('intakeForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      // Here you can handle form submission (send to backend, etc.)
+      // For now, redirect to thank you page
+      window.location.href = "thank-you.html";
+    });
+  </script>
+</body>
+</html>
