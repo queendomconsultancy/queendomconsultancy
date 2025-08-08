@@ -3,16 +3,58 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Thank You — Queendom Consultancy</title>
+  <title>Thank You | Queendom Consultancy LLC</title>
   <style>
-    body { background: #000; color: #FFD700; font-family: 'Segoe UI', sans-serif; text-align: center; padding: 5em 1em;}
-    h1 { font-size: 2em; margin-bottom: 1em;}
-    a { color: #FFD700; text-decoration: underline;}
+    body {
+      margin: 0;
+      background-color: #000;
+      color: gold;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+    }
+    .logo {
+      width: 100px;
+      margin-bottom: 10px;
+    }
+    .container {
+      margin-top: 40px;
+    }
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 15px;
+    }
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 25px;
+    }
+    .btn {
+      background-color: gold;
+      color: black;
+      border: none;
+      padding: 12px 30px;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      display: inline-block;
+    }
+    .btn:hover {
+      background-color: #ffd700;
+    }
   </style>
 </head>
 <body>
-  <h1>Thank you for reaching out!</h1>
-  <p>Your submission has been received.<br>We’ll be in touch soon.</p>
-  <p><a href="/">Back to home</a></p>
+  <img class="logo" src="logo-queendom-consultancy.png" alt="Queendom Logo" />
+  <div class="container">
+    <h2>Thank You!</h2>
+    <p>Your form has been submitted. We appreciate your interest and will be in touch soon.</p>
+    <a class="btn" href="index.html">Return to Home</a>
+  </div>
 </body>
 </html>
