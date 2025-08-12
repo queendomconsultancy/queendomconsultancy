@@ -25,6 +25,11 @@
     .logo {
       width: 120px;
       margin-bottom: 15px;
+      border-radius: 20px;
+      box-shadow: 0 8px 40px rgba(255,215,0,0.18);
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     h1 {
@@ -55,20 +60,128 @@
       background-color: #ffd700;
     }
 
-    footer {
-      margin-top: 50px;
-      font-size: 0.9rem;
-      opacity: 0.7;
+    .section {
+      padding: 2.5em 1.2em 3em 1.2em;
+      max-width: 800px;
+      margin: 2em auto 0 auto;
+      background: rgba(29, 23, 1, 0.18);
+      border-radius: 22px;
+      box-shadow: 0 2px 26px rgba(255,215,0,0.09);
+      border: 1.5px solid #FFD70033;
+    }
+    .section-title {
+      color: #FFD700;
+      font-size: 1.7em;
+      margin-bottom: 0.5em;
+      text-align: center;
+      letter-spacing: 1.5px;
+      font-weight: 600;
+      font-family: 'Montserrat', serif;
+    }
+    form {
+      background: #181818;
+      padding: 2em;
+      border-radius: 14px;
+      margin-top: 2em;
+      box-shadow: 0 2px 22px #222;
+      border: 1px solid #FFD70030;
+    }
+    label {
+      display: block;
+      margin-top: 1.05em;
+      font-weight: 600;
+      color: #FFD700;
+      font-family: 'Montserrat', serif;
+      font-size: 1em;
+      letter-spacing: 0.5px;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 0.77em;
+      margin-top: 0.25em;
+      background: #222;
+      border: 1px solid #FFD70044;
+      color: #fff;
+      border-radius: 7px;
+      font-size: 1em;
+      font-family: 'Montserrat', serif;
+      box-shadow: 0 1px 8px #18181822;
+      transition: border 0.17s;
+    }
+    input:focus, select:focus, textarea:focus {
+      border-color: #FFD700;
+      outline: none;
+    }
+    button {
+      margin-top: 1.5em;
+      background: linear-gradient(90deg,#FFD700 70%,#ffe46b 100%);
+      color: #0a0a0a;
+      padding: 1em 2em;
+      border: none;
+      font-family: 'Montserrat', serif;
+      font-size: 1em;
+      font-weight: 700;
+      cursor: pointer;
+      border-radius: 30px;
+      box-shadow: 0 2px 12px rgba(255,215,0,0.13);
+      transition: background 0.19s, box-shadow 0.19s;
+    }
+    button:hover {
+      background: linear-gradient(90deg,#ffe46b 80%,#FFD700 100%);
+      box-shadow: 0 4px 18px rgba(255,215,0,0.22);
+    }
+    @media (max-width: 600px) {
+      header h1 { font-size: 2em; }
+      .section-title { font-size: 1.2em; }
+      .section { padding: 1em 0.5em 2em 0.5em; }
     }
   </style>
 </head>
 <body>
+  <img class="logo" src="https://raw.githubusercontent.com/queendomconsultancy/assets/main/logo-queendom-consultancy.png" alt="Queendom Consultancy Logo" />
   <header>
-    <img class="logo" src="logo-queendom-consultancy.png" alt="Queendom Logo" />
-    <h1>Queendom Consultancy LLC</h1>
-    <p>Empowering legacies. Building futures. Guiding your business journey.</p>
-    <a class="btn" href="intake-form.html">Go to Intake Form</a>
+    <h1>QUEENDOM CONSULTANCY</h1>
+    <p>Build Your Legacy. Lead with Purpose.</p>
+    <a href="#intake" class="btn">Start Your Journey</a>
   </header>
+
+  <section class="section" id="intake">
+    <h3 class="section-title">Client Intake Form</h3>
+    <form name="queendom-intake" method="POST" data-netlify="true"
+          action="https://formsubmit.co/royallagacysolutions@gmail.com?_next=https://queendomconsultancy.com/thank-you">
+      <input type="hidden" name="form-name" value="queendom-intake" />
+      <label>Full Name</label><input type="text" name="Full Name" required />
+      <label>Email</label><input type="email" name="Email" required />
+      <label>Business Name</label><input type="text" name="Business Name" />
+      <label>Services Needed</label>
+      <select name="Services Needed" multiple>
+        <option>Business Strategy</option>
+        <option>Remote HR Support</option>
+        <option>Funding Preparation</option>
+        <option>Onboarding System Setup</option>
+        <option>Partnership & Contracts</option>
+        <option>Legacy Planning</option>
+      </select>
+      <label>Fee Structure</label>
+      <select name="Fee Structure" required>
+        <option>Flat Rate Package</option>
+        <option>Hourly Support</option>
+        <option>Revenue Share / Equity</option>
+        <option>Request a Custom Quote</option>
+      </select>
+      <label>Resources Requested</label>
+      <select name="Resources Requested" multiple>
+        <option>Templates</option>
+        <option>Funding/Grant Lists</option>
+        <option>Admin/VA Services</option>
+        <option>Investor Readiness Kit</option>
+        <option>Partnership Kit</option>
+      </select>
+      <label>Additional Notes</label>
+      <textarea name="Additional Notes" rows="5"></textarea>
+      <button type="submit">Submit</button>
+    </form>
+  </section>
 
   <footer>
     &copy; 2025 Queendom Consultancy LLC. All rights reserved.
