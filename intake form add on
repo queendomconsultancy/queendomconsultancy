@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Queendom Consultancy | Intake Form</title>
+  <style>
+    body {
+      background-color: #000;
+      color: gold;
+      font-family: 'Segoe UI', sans-serif;
+      padding: 2rem;
+    }
+    .form-container {
+      background: rgba(0, 0, 0, 0.8);
+      padding: 40px 30px;
+      border-radius: 16px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+      max-width: 600px;
+      margin: auto;
+    }
+    label {
+      display: block;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 12px;
+      margin-top: 8px;
+      border-radius: 6px;
+      border: none;
+      font-size: 1rem;
+    }
+    button {
+      margin-top: 24px;
+      padding: 12px 20px;
+      font-size: 1rem;
+      background-color: gold;
+      border: none;
+      color: black;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h1>Client Intake Form</h1>
+    <form name="intake" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+      <input type="hidden" name="form-name" value="intake" />
+      <p hidden>
+        <label>Don’t fill this out: <input name="bot-field" /></label>
+      </p>
+
+      <label for="Client Name">Full Name</label>
+      <input type="text" name="Client Name" required />
+
+      <label for="Email">Email Address</label>
+      <input type="email" name="Email" required />
+
+      <label for="Service Requested">What service are you seeking?</label>
+      <select name="Service Requested" required>
+        <option value="">-- Select Service --</option>
+        <option value="Standard Consulting Fee">Standard Consulting Fee</option>
+        <option value="CPA Referral Coordination">CPA Referral Coordination</option>
+        <option value="Bookkeeping Referral Coordination">Bookkeeping Referral Coordination</option>
+        <option value="Grant Submission">Grant Submission</option>
+      </select>
+
+      <label for="Preferred Start Date">Preferred Start Date</label>
+      <input type="date" name="Preferred Start Date" />
+
+      <label for="Budget/Goals">Briefly share your budget or business goals</label>
+      <textarea name="Budget/Goals" rows="4"></textarea>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</body>
+</html>
