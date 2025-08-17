@@ -71,38 +71,6 @@
       min-height: 60px;
     }
 
-    .service-fees {
-      background: #1a1a1a;
-      padding: 1em;
-      border-radius: 6px;
-      margin: 1em 0;
-      border-left: 4px solid gold;
-      text-align: left;
-    }
-
-    .service-fees h3 {
-      color: gold;
-      margin-top: 0;
-      font-size: 1.1em;
-    }
-
-    .service-fees ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    .service-fees li {
-      display: flex;
-      justify-content: space-between;
-      padding: 0.25em 0;
-      border-bottom: 1px solid #333;
-    }
-
-    .service-fees li:last-child {
-      border-bottom: none;
-    }
-
     .btn {
       width: 100%;
       background-color: gold;
@@ -143,19 +111,8 @@
   <div class="form-container">
     <img class="logo" src="logo-queendom-consultancy.png" alt="Queendom Logo" />
     <h2>Intake Form</h2>
-    
-    <!-- Service Pricing Information -->
-    <div class="service-fees">
-      <h3>Service Pricing</h3>
-      <ul>
-        <li><span>Standard Consulting Fee</span><span>$100</span></li>
-        <li><span>CPA Referral Coordination</span><span>$150</span></li>
-        <li><span>Bookkeeping Referral Coordination</span><span>$120</span></li>
-        <li><span>Grant Submission</span><span>$200</span></li>
-        <li><span>Business Plan Writing</span><span>$250</span></li>
-        <li><span>Nonprofit Formation</span><span>$300</span></li>
-      </ul>
-    </div>
+
+    <!-- Service Pricing section removed -->
 
     <form id="intakeForm" name="queendom-intake" method="POST" action="YOUR_GOOGLE_APPS_SCRIPT_URL_HERE">
       <div class="form-section">
@@ -188,7 +145,7 @@
 
       <div class="form-section">
         <label for="additionalNotes">Additional Notes</label>
-        <textarea id="additionalNotes" name="Additional Notes" rows="4" 
+        <textarea id="additionalNotes" name="Additional Notes" rows="4"
                   placeholder="Please describe your specific needs, timeline, or any questions you have..."></textarea>
       </div>
 
@@ -196,49 +153,5 @@
       <button class="btn" type="submit">Submit Intake Form</button>
     </form>
   </div>
-  
-  <script>
-    // Add form submission handling
-    document.getElementById('intakeForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      
-      // Get selected services
-      const servicesSelect = document.getElementById('services');
-      const selectedServices = Array.from(servicesSelect.selectedOptions).map(option => option.value);
-      
-      if (selectedServices.length === 0) {
-        alert('Please select at least one service.');
-        return;
-      }
-      
-      // Calculate estimated total
-      const serviceFees = {
-        'Standard Consulting Fee': 100,
-        'CPA Referral Coordination': 150,
-        'Bookkeeping Referral Coordination': 120,
-        'Grant Submission': 200,
-        'Business Plan Writing': 250,
-        'Nonprofit Formation': 300
-      };
-      
-      const total = selectedServices.reduce((sum, service) => sum + serviceFees[service], 0);
-      
-      // Show confirmation
-      const servicesList = selectedServices.join(', ');
-      const confirmMessage = `Please confirm your submission:\n\nServices: ${servicesList}\nEstimated Total: $${total}\n\nProceed with submission?`;
-      
-      if (confirm(confirmMessage)) {
-        // Submit form (in real implementation, this would go to Google Apps Script)
-        alert('Form submitted successfully! We will contact you shortly.\n\nSubmission Summary:\nServices: ' + servicesList + '\nEstimated Total: $' + total);
-        
-        // Redirect to thank you page
-        window.location.href = "thank-you.html";
-        
-        // In real implementation, you would:
-        // this.action = 'YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL';
-        // this.submit();
-      }
-    });
-  </script>
 </body>
 </html>
