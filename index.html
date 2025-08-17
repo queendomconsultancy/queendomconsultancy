@@ -1,8 +1,348 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Queendom Consultancy</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Queendom Consultancy - Empowering Women & Organizations</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #000;
+      color: #fff;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+
+    /* Header Section */
+    header {
+      text-align: center;
+      padding: 3rem 1rem;
+      background: linear-gradient(135deg, #000 0%, #111 100%);
+    }
+
+    .logo {
+      width: 120px;
+      height: auto;
+      margin-bottom: 1.5rem;
+    }
+
+    header h1 {
+      color: #FFD700;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+
+    .intro-text {
+      font-size: 1.2rem;
+      color: #ddd;
+      max-width: 600px;
+      margin: 0 auto 2rem;
+      line-height: 1.7;
+    }
+
+    /* Buttons */
+    .cta-buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 2rem;
+    }
+
+    .btn {
+      background-color: #FFD700;
+      color: #000;
+      padding: 1rem 2rem;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 8px;
+      display: inline-block;
+      transition: all 0.3s ease;
+      font-size: 1.1rem;
+      border: 2px solid #FFD700;
+    }
+
+    .btn:hover {
+      background-color: transparent;
+      color: #FFD700;
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(255, 215, 0, 0.3);
+    }
+
+    .btn-secondary {
+      background-color: transparent;
+      color: #FFD700;
+      border: 2px solid #FFD700;
+    }
+
+    .btn-secondary:hover {
+      background-color: #FFD700;
+      color: #000;
+    }
+
+    /* Content Sections */
+    .content-section {
+      padding: 4rem 1rem;
+      background-color: #111;
+      margin: 2rem 0;
+    }
+
+    .content-section:nth-child(even) {
+      background-color: #0a0a0a;
+    }
+
+    .section-title {
+      color: #FFD700;
+      font-size: 2.2rem;
+      text-align: center;
+      margin-bottom: 3rem;
+      font-weight: 600;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .service-item {
+      background: rgba(255, 215, 0, 0.1);
+      padding: 1.5rem;
+      border-radius: 10px;
+      border-left: 4px solid #FFD700;
+      transition: transform 0.3s ease;
+    }
+
+    .service-item:hover {
+      transform: translateY(-5px);
+      background: rgba(255, 215, 0, 0.15);
+    }
+
+    .service-item h3 {
+      color: #FFD700;
+      margin-bottom: 0.5rem;
+      font-size: 1.3rem;
+    }
+
+    .service-item p {
+      color: #ddd;
+      font-size: 1rem;
+    }
+
+    /* Why Choose Us */
+    .features-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .feature-item {
+      text-align: center;
+      padding: 1.5rem;
+    }
+
+    .feature-icon {
+      width: 60px;
+      height: 60px;
+      background: #FFD700;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1rem;
+      font-size: 1.5rem;
+      color: #000;
+      font-weight: bold;
+    }
+
+    .feature-item h3 {
+      color: #FFD700;
+      margin-bottom: 0.5rem;
+      font-size: 1.2rem;
+    }
+
+    .feature-item p {
+      color: #ddd;
+      font-size: 1rem;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #000;
+      text-align: center;
+      padding: 2rem 1rem;
+      border-top: 2px solid #FFD700;
+    }
+
+    footer p {
+      color: #ddd;
+      font-size: 1rem;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      .intro-text {
+        font-size: 1.1rem;
+      }
+
+      .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .btn {
+        width: 100%;
+        max-width: 300px;
+        text-align: center;
+      }
+
+      .section-title {
+        font-size: 1.8rem;
+      }
+
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .features-list {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header {
+        padding: 2rem 1rem;
+      }
+
+      header h1 {
+        font-size: 1.8rem;
+      }
+
+      .content-section {
+        padding: 3rem 1rem;
+      }
+
+      .logo {
+        width: 100px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <img src="./logo-queendom-consultancy.png" alt="Queendom Consultancy Logo">
+  <!-- Header Section -->
+  <header>
+    <div class="container">
+      <!-- Using queendomlogo.png as logo-queendom-consultancy.png appears to be corrupted -->
+      <img src="./queendomlogo.png" alt="Queendom Consultancy Logo" class="logo">
+      <h1>Welcome to Queendom Consultancy</h1>
+      <p class="intro-text">
+        Empowering women and organizations to build lasting legacies through strategic consulting, 
+        innovative solutions, and purposeful leadership. We provide comprehensive business support 
+        to help you navigate growth, secure funding, and create sustainable success.
+      </p>
+      <div class="cta-buttons">
+        <a href="#onboarding" class="btn">Onboarding</a>
+        <a href="intake-form.html" class="btn btn-secondary">Intake Form</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Our Services Section -->
+  <section class="content-section">
+    <div class="container">
+      <h2 class="section-title">Our Services</h2>
+      <div class="services-grid">
+        <div class="service-item">
+          <h3>Business Strategy</h3>
+          <p>Comprehensive strategic planning to align your vision with actionable goals and sustainable growth.</p>
+        </div>
+        <div class="service-item">
+          <h3>Remote HR Support</h3>
+          <p>Professional human resources management and support tailored for modern, distributed teams.</p>
+        </div>
+        <div class="service-item">
+          <h3>Funding Preparation</h3>
+          <p>Expert guidance through grant applications, investor pitches, and funding strategy development.</p>
+        </div>
+        <div class="service-item">
+          <h3>Onboarding System Setup</h3>
+          <p>Streamlined onboarding processes to integrate new team members effectively and efficiently.</p>
+        </div>
+        <div class="service-item">
+          <h3>Partnership & Contracts</h3>
+          <p>Strategic partnership development and contract negotiation to expand your business reach.</p>
+        </div>
+        <div class="service-item">
+          <h3>Legacy Planning</h3>
+          <p>Long-term strategic planning to ensure your business creates lasting impact and sustainable value.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us Section -->
+  <section class="content-section">
+    <div class="container">
+      <h2 class="section-title">Why Choose Us</h2>
+      <div class="features-list">
+        <div class="feature-item">
+          <div class="feature-icon">★</div>
+          <h3>Expert Guidance</h3>
+          <p>Years of experience helping women and organizations achieve their strategic goals with proven methodologies.</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">⚡</div>
+          <h3>Tailored Solutions</h3>
+          <p>Customized consulting approaches designed specifically for your unique challenges and opportunities.</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">🤝</div>
+          <h3>Collaborative Partnership</h3>
+          <p>We work alongside you as trusted partners, ensuring knowledge transfer and sustainable implementation.</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">📈</div>
+          <h3>Measurable Results</h3>
+          <p>Focus on delivering tangible outcomes that drive growth, efficiency, and long-term success.</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">🌟</div>
+          <h3>Empowerment Focus</h3>
+          <p>Dedicated to empowering women leaders and organizations to reach their full potential and create lasting impact.</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">🔧</div>
+          <h3>Comprehensive Support</h3>
+          <p>End-to-end consulting services from initial strategy to implementation and ongoing optimization.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 Queendom Consultancy. Build Your Legacy. Lead with Purpose.</p>
+    </div>
+  </footer>
 </body>
 </html>
