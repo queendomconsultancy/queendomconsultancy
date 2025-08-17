@@ -6,30 +6,30 @@
   <title>Queendom Consultancy</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:700,400&display=swap">
   <style>
+    :root {
+      --gold: #FFD700;
+      --black: #000000;
+      --off-black: #181818;
+      --gray: #e0e0e0;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
     body {
       font-family: 'Montserrat', Arial, sans-serif;
-      margin: 0;
-      background: #f6f7fb;
-      color: #222;
+      background: var(--black);
+      color: var(--gray);
       min-height: 100vh;
     }
-    header {
-      background: #fff;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.03);
-      padding: 1.5rem 0;
-      text-align: center;
-    }
-    header img {
-      max-width: 180px;
-      height: auto;
-    }
     main {
-      max-width: 600px;
-      margin: 2.5rem auto;
-      background: #fff;
+      max-width: 640px;
+      background: var(--off-black);
       border-radius: 18px;
-      box-shadow: 0 6px 32px rgba(0,0,0,0.08);
+      box-shadow: 0 6px 32px rgba(0,0,0,0.18);
       padding: 2.5rem 2rem 2rem 2rem;
+      margin: 3rem auto 0 auto;
       text-align: center;
     }
     h1 {
@@ -37,19 +37,43 @@
       font-weight: 700;
       margin-bottom: 1.25rem;
       letter-spacing: -2px;
-      color: #472A7A;
+      color: var(--gold);
+      text-shadow: 0 2px 5px rgba(0,0,0,0.15);
     }
-    p {
+    .vision-section {
+      background: rgba(255,215,0,0.07);
+      border-left: 5px solid var(--gold);
+      border-radius: 10px;
+      margin: 0 auto 2.2rem auto;
+      padding: 1.2rem 1.2rem 1.2rem 1.4rem;
+      color: var(--gray);
+      box-shadow: 0 2px 10px rgba(255,215,0,0.04);
+      max-width: 600px;
+      text-align: left;
+    }
+    .vision-title {
+      color: var(--gold);
+      font-size: 1.22rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      letter-spacing: 0.5px;
+    }
+    .vision-text {
+      font-size: 1.08rem;
+      line-height: 1.6;
+    }
+    .intro-text {
       font-size: 1.15rem;
       margin-bottom: 2rem;
-      color: #4b4b4b;
+      color: var(--gray);
+      line-height: 1.6;
     }
     .actions {
       display: flex;
-      flex-direction: column;
+      justify-content: center;
       gap: 1rem;
       align-items: center;
-      margin-bottom: 2rem;
+      margin-bottom: 1.8rem;
     }
     .actions a {
       padding: 0.85rem 2.2rem;
@@ -57,25 +81,30 @@
       font-size: 1.08rem;
       font-weight: 600;
       text-decoration: none;
-      background: #6236ff;
-      color: #fff;
-      transition: background 0.2s;
-      box-shadow: 0 2px 6px rgba(98,54,255,0.09);
+      background: var(--gold);
+      color: var(--black);
+      border: 2px solid var(--gold);
+      transition: all 0.2s;
+      box-shadow: 0 2px 8px rgba(255,215,0,0.10);
+      letter-spacing: 0.5px;
     }
-    .actions a.secondary {
-      background: #f5f4fa;
-      color: #6236ff;
-      border: 1px solid #d3c6f1;
-      margin-top: 0;
+    .actions a:hover, .actions a:focus {
+      background: transparent;
+      color: var(--gold);
+      cursor: pointer;
+      outline: none;
+      border: 2px solid var(--gold);
+      box-shadow: 0 4px 18px rgba(255,215,0,0.25);
     }
     .info-section {
       text-align: left;
       margin-top: 2.5rem;
       padding: 1.5rem 1rem 0 1rem;
-      border-top: 1px solid #eee;
+      border-top: 1px solid #333;
+      background: transparent;
     }
     .info-section h2 {
-      color: #6236ff;
+      color: var(--gold);
       font-size: 1.36rem;
       margin-bottom: 0.7rem;
       font-weight: 700;
@@ -91,36 +120,59 @@
     @media (max-width: 600px) {
       main { padding: 1.2rem 0.5rem; }
       .info-section { padding: 1.2rem 0.2rem 0 0.2rem; }
+      .vision-section { padding: 1rem 0.7rem 1rem 1rem; }
+    }
+    footer {
+      background: var(--black);
+      border-top: 2px solid var(--gold);
+      text-align: center;
+      padding: 1.6rem 1rem;
+      margin-top: 3rem;
+    }
+    footer p {
+      color: var(--gray);
+      font-size: 1rem;
+      letter-spacing: 0.2px;
     }
   </style>
 </head>
 <body>
-  <header>
-    <img src="logo-queendom-consultancy.png" alt="Queendom Consultancy Logo" />
-  </header>
   <main>
     <h1>Welcome to Queendom Consultancy</h1>
-    <p>Empowering women and organizations through strategic consulting, tailored programs, and expert guidance.</p>
+    <div class="vision-section">
+      <div class="vision-title">Vision Statement for Queendom Consultancy</div>
+      <div class="vision-text">
+        At Queendom Consultancy, our vision is to empower businesses to build lasting legacies through innovative solutions, strategic partnerships, and access to essential funding resources. We strive to be the catalyst for growth and transformation, helping our clients achieve their fullest potential by providing exceptional consulting services, fostering a network of trusted, high-quality partners, and connecting them with the financial support they need to succeed.
+      </div>
+    </div>
+    <div class="intro-text">
+      Empowering women and organizations through strategic consulting, tailored programs, and expert guidance. We help you build a lasting legacy, achieve organizational goals, and unlock your full potential.
+    </div>
     <div class="actions">
-      <a href="#" id="onboarding-btn">Onboarding</a>
-      <a href="#" class="secondary" id="intake-btn">Intake Form</a>
+      <a href="intake-form.html" id="intake-btn">Intake Form</a>
     </div>
     <div class="info-section">
       <h2>Our Services</h2>
       <ul>
-        <li>Leadership development and coaching</li>
-        <li>DEI (Diversity, Equity & Inclusion) strategy</li>
-        <li>Organizational culture transformation</li>
-        <li>Workshops, facilitation, and training</li>
-        <li>Custom consulting solutions</li>
+        <li>Business strategy planning and execution</li>
+        <li>Remote HR support and onboarding systems</li>
+        <li>Grant and funding preparation</li>
+        <li>Partnership development and contracts</li>
+        <li>Legacy and sustainability planning</li>
       </ul>
       <h2>Why Choose Us?</h2>
       <ul>
-        <li>Decades of experience in empowering women and diverse teams</li>
-        <li>Tailored, actionable strategies for real impact</li>
-        <li>Collaborative, empathetic, and results-driven approach</li>
+        <li>Proven track record supporting women and minority-owned organizations</li>
+        <li>Personalized solutions and collaborative approach</li>
+        <li>Transparent, reliable, and results-driven</li>
+        <li>Committed to empowering your vision and success</li>
       </ul>
     </div>
   </main>
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 Queendom Consultancy. Build Your Legacy. Lead with Purpose.</p>
+    </div>
+  </footer>
 </body>
 </html>
