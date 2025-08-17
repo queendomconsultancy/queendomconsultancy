@@ -28,11 +28,6 @@
       width: 100%;
     }
 
-    .logo {
-      width: 100px;
-      margin-bottom: 10px;
-    }
-
     h2 {
       margin-bottom: 20px;
       font-size: 2rem;
@@ -100,19 +95,22 @@
     }
 
     .help-text {
-      font-size: 0.9em;
-      color: #aaa;
+      font-size: 1em;
+      color: #fffbe7;
       margin-top: 0.5em;
+      background: #333316;
+      padding: 8px 12px;
+      border-radius: 7px;
+      margin-bottom: 10px;
+      font-weight: 600;
+      text-align: left;
     }
   </style>
 </head>
 <body>
   <a class="back-link" href="index.html">&larr; Back to Home</a>
   <div class="form-container">
-    <img class="logo" src="logo-queendom-consultancy.png" alt="Queendom Logo" />
     <h2>Intake Form</h2>
-
-    <!-- Service Pricing section removed -->
 
     <form id="intakeForm" name="queendom-intake" method="POST" action="YOUR_GOOGLE_APPS_SCRIPT_URL_HERE">
       <div class="form-section">
@@ -140,7 +138,13 @@
           <option value="Business Plan Writing">Business Plan Writing</option>
           <option value="Nonprofit Formation">Nonprofit Formation</option>
         </select>
-        <div class="help-text">Hold Ctrl (or Cmd on Mac) to select multiple services</div>
+        <div class="help-text">
+          Tap each service you need. You can select more than one.<br>
+          <span style="font-size:0.95em; color:#ffe066;">
+            On desktop: Hold Ctrl (Windows) or Cmd (Mac) to select several at once.<br>
+            On mobile: Just tap each option to select or deselect.
+          </span>
+        </div>
       </div>
 
       <div class="form-section">
