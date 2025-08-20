@@ -12,6 +12,14 @@
             margin: 0;
             padding: 20px;
         }
+        .logo-header { 
+            text-align: center;
+            margin-bottom: 20px; 
+        }
+        .logo-header svg { 
+            max-width: 180px; 
+            height: auto; 
+        }
         h1 {
             text-align: center;
             color: gold;
@@ -27,7 +35,7 @@
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
         }
-        input, textarea {
+        input, textarea, select {
             width: 100%;
             padding: 10px;
             margin: 10px 0;
@@ -35,6 +43,13 @@
             border-radius: 4px;
             background-color: #333;
             color: gold;
+        }
+        label {
+            display: block;
+            margin-top: 15px;
+            margin-bottom: 5px;
+            color: gold;
+            font-weight: bold;
         }
         button {
             background-color: gold;
@@ -50,6 +65,21 @@
     </style>
 </head>
 <body>
+    <div class="logo-header">
+        <svg viewBox="0 0 300 80" xmlns="http://www.w3.org/2000/svg">
+            <!-- Crown icon -->
+            <g fill="#FFD700">
+                <path d="M40 25 L45 15 L50 25 L55 15 L60 25 L65 35 L35 35 Z" />
+                <rect x="35" y="35" width="30" height="8" />
+                <circle cx="50" cy="20" r="3" />
+                <circle cx="42" cy="22" r="2" />
+                <circle cx="58" cy="22" r="2" />
+            </g>
+            <!-- Company text -->
+            <text x="80" y="35" font-family="Arial, sans-serif" font-size="18" font-weight="600" fill="#FFD700">QUEENDOM</text>
+            <text x="80" y="52" font-family="Arial, sans-serif" font-size="12" font-weight="400" fill="#FFD700">CONSULTANCY</text>
+        </svg>
+    </div>
     <h1 class="sunflower">Fleet Intake Form</h1>
     <form>
         <label for="fleetName">Fleet Name:</label>
@@ -61,8 +91,17 @@
         <label for="contactNumber">Contact Number:</label>
         <input type="tel" id="contactNumber" name="contactNumber" required>
         
-        <label for="vehicleType">Vehicle Type:</label>
-        <input type="text" id="vehicleType" name="vehicleType" required>
+        <label for="vehicleType">What type of vehicle do you drive?</label>
+        <select id="vehicleType" name="vehicleType" required>
+            <option value="">Select vehicle type...</option>
+            <option value="cargo-van">Cargo Van</option>
+            <option value="box-truck">Box Truck</option>
+            <option value="pickup-truck">Pickup Truck</option>
+            <option value="delivery-van">Delivery Van</option>
+            <option value="straight-truck">Straight Truck</option>
+            <option value="sprinter-van">Sprinter Van</option>
+            <option value="other">Other</option>
+        </select>
         
         <label for="description">Description:</label>
         <textarea id="description" name="description" rows="4" required></textarea>

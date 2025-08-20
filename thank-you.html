@@ -17,6 +17,13 @@
       min-height: 100vh;
       text-align: center;
     }
+    .logo-header { 
+      margin-bottom: 20px; 
+    }
+    .logo-header svg { 
+      max-width: 180px; 
+      height: auto; 
+    }
     .container {
       margin-top: 40px;
     }
@@ -46,6 +53,21 @@
   </style>
 </head>
 <body>
+  <div class="logo-header">
+    <svg viewBox="0 0 300 80" xmlns="http://www.w3.org/2000/svg">
+      <!-- Crown icon -->
+      <g fill="#FFD700">
+        <path d="M40 25 L45 15 L50 25 L55 15 L60 25 L65 35 L35 35 Z" />
+        <rect x="35" y="35" width="30" height="8" />
+        <circle cx="50" cy="20" r="3" />
+        <circle cx="42" cy="22" r="2" />
+        <circle cx="58" cy="22" r="2" />
+      </g>
+      <!-- Company text -->
+      <text x="80" y="35" font-family="Segoe UI, sans-serif" font-size="18" font-weight="600" fill="#FFD700">QUEENDOM</text>
+      <text x="80" y="52" font-family="Segoe UI, sans-serif" font-size="12" font-weight="400" fill="#FFD700">CONSULTANCY</text>
+    </svg>
+  </div>
   <div class="container">
     <h2>Thank You!</h2>
     <p>Your form has been submitted. We appreciate your interest and will be in touch soon.</p>
