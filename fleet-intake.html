@@ -6,15 +6,25 @@
     <title>Fleet Intake Form</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: black;
-            color: gold;
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #000;
+            color: #fff;
             margin: 0;
             padding: 20px;
         }
+        .logo {
+            text-align: center;
+            margin-bottom: 2em;
+        }
+        .logo svg {
+            width: 200px;
+            height: auto;
+        }
         h1 {
             text-align: center;
-            color: gold;
+            color: #FFD700;
+            font-size: 2em;
+            margin-bottom: 1em;
         }
         .sunflower {
             color: #FFD700; /* Sunflower color */
@@ -22,36 +32,59 @@
         form {
             max-width: 600px;
             margin: auto;
-            padding: 20px;
-            background-color: #222;
-            border-radius: 8px;
+            padding: 2em;
+            background-color: #111;
+            border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        label {
+            display: block;
+            margin-top: 1em;
+            font-weight: bold;
+            color: #FFD700;
         }
         input, textarea {
             width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid gold;
-            border-radius: 4px;
-            background-color: #333;
-            color: gold;
+            padding: 0.75em;
+            margin-top: 0.25em;
+            border: 1px solid #444;
+            border-radius: 5px;
+            background-color: #222;
+            color: #fff;
         }
         button {
-            background-color: gold;
-            color: black;
+            margin-top: 1.5em;
+            background-color: #FFD700;
+            color: #000;
             border: none;
-            padding: 10px 15px;
-            border-radius: 4px;
+            padding: 1em 2em;
+            border-radius: 5px;
             cursor: pointer;
+            font-weight: bold;
         }
         button:hover {
-            background-color: #FFD700;
+            background-color: #FFC700;
         }
     </style>
 </head>
 <body>
+    <div class="logo">
+        <svg viewBox="0 0 300 80" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" style="stop-color:#FFD700;stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:#FFA500;stop-opacity:1" />
+                </linearGradient>
+            </defs>
+            <rect width="300" height="80" fill="#000" stroke="#FFD700" stroke-width="2" rx="5"/>
+            <text x="150" y="35" text-anchor="middle" fill="url(#goldGradient)" font-family="Segoe UI, sans-serif" font-size="18" font-weight="bold">QUEENDOM</text>
+            <text x="150" y="55" text-anchor="middle" fill="url(#goldGradient)" font-family="Segoe UI, sans-serif" font-size="14" font-weight="normal">CONSULTANCY</text>
+            <circle cx="25" cy="25" r="8" fill="#FFD700"/>
+            <circle cx="275" cy="55" r="8" fill="#FFD700"/>
+        </svg>
+    </div>
     <h1 class="sunflower">Fleet Intake Form</h1>
-    <form>
+    <form method="get" action="thank-you.html">
         <label for="fleetName">Fleet Name:</label>
         <input type="text" id="fleetName" name="fleetName" required>
         

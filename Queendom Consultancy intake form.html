@@ -74,9 +74,32 @@
       cursor: pointer;
       border-radius: 5px;
     }
+    .logo {
+      text-align: center;
+      margin-bottom: 1em;
+    }
+    .logo svg {
+      width: 200px;
+      height: auto;
+    }
   </style>
 </head>
 <body>
+  <div class="logo">
+    <svg viewBox="0 0 300 80" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" style="stop-color:#FFD700;stop-opacity:1" />
+          <stop offset="100%" style="stop-color:#FFA500;stop-opacity:1" />
+        </linearGradient>
+      </defs>
+      <rect width="300" height="80" fill="#000" stroke="#FFD700" stroke-width="2" rx="5"/>
+      <text x="150" y="35" text-anchor="middle" fill="url(#goldGradient)" font-family="Segoe UI, sans-serif" font-size="18" font-weight="bold">QUEENDOM</text>
+      <text x="150" y="55" text-anchor="middle" fill="url(#goldGradient)" font-family="Segoe UI, sans-serif" font-size="14" font-weight="normal">CONSULTANCY</text>
+      <circle cx="25" cy="25" r="8" fill="#FFD700"/>
+      <circle cx="275" cy="55" r="8" fill="#FFD700"/>
+    </svg>
+  </div>
   <header>
     <h1>QUEENDOM CONSULTANCY</h1>
     <h2>Build Your Legacy. Lead with Purpose.</h2>
@@ -85,7 +108,7 @@
 
   <section class="section" id="intake">
     <h3 class="section-title">Client Intake Form</h3>
-    <form name="queendom-intake" method="POST" data-netlify="true" action="https://formsubmit.co/royallagacysolutions@gmail.com?_next=https://queendomconsultancy.com/thank-you">
+    <form name="queendom-intake" method="get" action="thank-you.html">
       <input type="hidden" name="form-name" value="queendom-intake">
       <label>Full Name</label><input type="text" name="Full Name" required="">
       <label>Email</label><input type="email" name="Email" required="">
