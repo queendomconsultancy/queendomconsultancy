@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Transport Fleet Intake — Queendom Consultancy</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { 
+      background: #000; 
+      color: #fff; 
+      font-family: 'Playfair Display', serif; 
+      margin: 0; 
+      line-height: 1.6;
+    }
+    .logo-container {
+      text-align: center;
+      padding: 2em 0 1em 0;
+    }
+    .logo { 
+      width: 100px; 
+      height: 100px; 
+      border-radius: 50%; 
+    }
+    main { 
+      max-width: 600px; 
+      margin: 1em auto 3em auto; 
+      background: #111; 
+      padding: 2em; 
+      border-radius: 8px; 
+      position: relative;
+      overflow: hidden;
+    }
+    /* Sunflower vine SVG decorations */
+    .vine-decoration {
+      position: absolute;
+      opacity: 0.1;
+      pointer-events: none;
+    }
+    .vine-left {
+      top: 20px;
+      left: -10px;
+      transform: rotate(-15deg);
+    }
+    .vine-right {
+      bottom: 20px;
+      right: -10px;
+      transform: rotate(165deg);
+    }
+    h1 { 
+      color: #FFD700; 
+      text-align: center;
+      margin-bottom: 1.5em;
+      font-weight: 600;
+    }
+    .form-section {
+      margin-bottom: 1.5em;
+      position: relative;
+    }
+    label { 
+      display: block; 
+      margin-top: 1em; 
+      color: #FFD700;
+      font-weight: 600;
+    }
+    input, textarea, select { 
+      width: 100%; 
+      padding: 0.75em; 
+      margin-top: 0.5em; 
+      border-radius: 4px; 
+      border: 1px solid #444;
+      background: #222;
+      color: #fff;
+      font-family: 'Playfair Display', serif;
+    }
+    select[multiple] {
+      min-height: 120px;
+    }
+    .service-option {
+      padding: 0.5em;
+      margin: 0.25em 0;
+    }
+    button { 
+      background: #FFD700; 
+      color: #000; 
+      padding: 1em 2em; 
+      border-radius: 5px; 
+      border: none; 
+      font-weight: 600; 
+      margin-top: 1.5em; 
+      cursor: pointer;
+      width: 100%;
+      font-size: 1.1em;
+      font-family: 'Playfair Display', serif;
+    }
+    button:hover {
+      background: #FFC700;
+    }
+    .required {
+      color: #ff6b6b;
+    }
+    .help-text {
+      font-size: 0.9em;
+      color: #aaa;
+      margin-top: 0.5em;
+    }
+  </style>
+</head>
+<body>
+  <div class="logo-container">
+    <img src="logo.png" alt="Queendom Consultancy Logo" class="logo">
+  </div>
+  
+  <main>
+    <!-- Sunflower vine decorations -->
+    <svg class="vine-decoration vine-left" width="80" height="200" viewBox="0 0 80 200" fill="none">
+      <path d="M10 0 Q20 40 15 80 Q25 120 20 160 Q30 200 25 200" stroke="#FFD700" stroke-width="2" fill="none" opacity="0.3"/>
+      <circle cx="15" cy="40" r="8" fill="#FFD700" opacity="0.2"/>
+      <circle cx="20" cy="120" r="6" fill="#FFD700" opacity="0.2"/>
+      <circle cx="25" cy="180" r="7" fill="#FFD700" opacity="0.2"/>
+      <!-- Sunflower petals -->
+      <path d="M15 32 L18 38 L15 44 L12 38 Z" fill="#FFD700" opacity="0.3"/>
+      <path d="M7 40 L13 37 L19 40 L13 43 Z" fill="#FFD700" opacity="0.3"/>
+      <path d="M23 40 L29 37 L35 40 L29 43 Z" fill="#FFD700" opacity="0.3"/>
+    </svg>
+    
+    <svg class="vine-decoration vine-right" width="80" height="200" viewBox="0 0 80 200" fill="none">
+      <path d="M70 0 Q60 40 65 80 Q55 120 60 160 Q50 200 55 200" stroke="#FFD700" stroke-width="2" fill="none" opacity="0.3"/>
+      <circle cx="65" cy="60" r="7" fill="#FFD700" opacity="0.2"/>
+      <circle cx="60" cy="140" r="8" fill="#FFD700" opacity="0.2"/>
+      <circle cx="55" cy="190" r="6" fill="#FFD700" opacity="0.2"/>
+      <!-- Sunflower petals -->
+      <path d="M65 52 L68 58 L65 64 L62 58 Z" fill="#FFD700" opacity="0.3"/>
+      <path d="M57 60 L63 57 L69 60 L63 63 Z" fill="#FFD700" opacity="0.3"/>
+      <path d="M73 60 L79 57 L85 60 L79 63 Z" fill="#FFD700" opacity="0.3"/>
+    </svg>
+
+    <h1>Join My Fleet Team - Transport Intake</h1>
+    <form id="intakeForm" name="queendom-intake" method="POST" action="YOUR_GOOGLE_APPS_SCRIPT_URL_HERE">
+      <div class="form-section">
+        <label for="fullName">
+          Full Name <span class="required">*</span>
+          <input type="text" id="fullName" name="Full Name" required />
+        </label>
+      </div>
+
+      <div class="form-section">
+        <label for="email">
+          Email <span class="required">*</span>
+          <input type="email" id="email" name="Email" required />
+        </label>
+      </div>
+
+      <div class="form-section">
+        <label for="businessName">
+          Business Name
+          <input type="text" id="businessName" name="Business Name" />
+        </label>
+      </div>
+
+      <div class="form-section">
+        <label for="services">
+          Services Requested <span class="required">*</span>
+          <select id="services" name="Service Requested[]" multiple required>
+            <option value="Standard Consulting Fee">Standard Consulting Fee</option>
+            <option value="CPA Referral Coordination">CPA Referral Coordination</option>
+            <option value="Bookkeeping Referral Coordination">Bookkeeping Referral Coordination</option>
+            <option value="Grant Submission">Grant Submission</option>
+            <option value="Business Plan Writing">Business Plan Writing</option>
+            <option value="Nonprofit Formation">Nonprofit Formation</option>
+          </select>
+          <div class="help-text">Hold Ctrl (or Cmd on Mac) to select multiple services</div>
+        </label>
+      </div>
+
+      <div class="form-section">
+        <label for="additionalNotes">
+          Additional Notes
+          <textarea id="additionalNotes" name="Additional Notes" rows="4"
+                    placeholder="Please describe your specific needs, timeline, or any questions you have..."></textarea>
+        </label>
+      </div>
+
+      <input type="hidden" name="form-name" value="queendom-intake" />
+      <button type="submit">Submit Intake Form</button>
+    </form>
+  </main>
+</body>
+</html>
