@@ -1,0 +1,23 @@
+# Screenshots for demonstration only
+*-page-with-logo.png
+*-with-logo-and-vines.png
+*-with-logo.png
+
+# Temporary files
+/tmp/
+
+# Build artifacts
+node_modules/
+dist/
+build/
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
