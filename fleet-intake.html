@@ -47,11 +47,25 @@
         button:hover {
             background-color: #FFD700;
         }
+        label {
+            display: block;
+            margin-top: 1em;
+            color: gold;
+            font-weight: bold;
+        }
+        .back-link {
+            color: gold;
+            text-decoration: underline;
+            display: block;
+            margin-bottom: 20px;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
-    <h1 class="sunflower">Fleet Intake Form</h1>
-    <form>
+    <a class="back-link" href="index.html">&larr; Back to Home</a>
+    <h1 class="sunflower">Fleet Team Intake Form</h1>
+    <form method="GET" action="thank-you.html">
         <label for="fleetName">Fleet Name:</label>
         <input type="text" id="fleetName" name="fleetName" required>
         
