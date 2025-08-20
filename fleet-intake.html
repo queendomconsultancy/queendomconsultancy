@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fleet Intake Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: black;
+            color: gold;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: gold;
+        }
+        .sunflower {
+            color: #FFD700; /* Sunflower color */
+        }
+        form {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            background-color: #222;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid gold;
+            border-radius: 4px;
+            background-color: #333;
+            color: gold;
+        }
+        button {
+            background-color: gold;
+            color: black;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #FFD700;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="sunflower">Fleet Intake Form</h1>
+    <form>
+        <label for="fleetName">Fleet Name:</label>
+        <input type="text" id="fleetName" name="fleetName" required>
+        
+        <label for="ownerName">Owner's Name:</label>
+        <input type="text" id="ownerName" name="ownerName" required>
+        
+        <label for="contactNumber">Contact Number:</label>
+        <input type="tel" id="contactNumber" name="contactNumber" required>
+        
+        <label for="vehicleType">Vehicle Type:</label>
+        <input type="text" id="vehicleType" name="vehicleType" required>
+        
+        <label for="description">Description:</label>
+        <textarea id="description" name="description" rows="4" required></textarea>
+        
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
