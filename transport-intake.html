@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fleet Team Intake | Queendom Consultancy</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      background-color: #0a0a0a;
+      color: gold;
+      font-family: 'Playfair Display', serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+      padding: 20px 10px;
+    }
+
+    .form-container {
+      background: rgba(0,0,0,0.8);
+      padding: 40px 30px;
+      border-radius: 16px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+      margin-top: 20px;
+      max-width: 500px;
+      width: 100%;
+    }
+
+    h2 {
+      color: gold;
+      margin-bottom: 20px;
+      font-size: 2rem;
+      font-weight: 700;
+    }
+
+    .form-section {
+      margin-bottom: 1.5em;
+      text-align: left;
+    }
+
+    label {
+      display: block;
+      text-align: left;
+      margin-bottom: 8px;
+      font-weight: 600;
+      color: gold;
+      font-size: 1.1em;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 12px;
+      border-radius: 6px;
+      border: none;
+      margin-bottom: 20px;
+      font-size: 1rem;
+      background: #222;
+      color: #fff;
+      font-family: 'Playfair Display', serif;
+      box-sizing: border-box;
+    }
+
+    input:focus, select:focus {
+      outline: 2px solid gold;
+      background: #333;
+    }
+
+    .btn {
+      width: 100%;
+      background-color: gold;
+      color: black;
+      border: none;
+      padding: 14px 0;
+      font-size: 1.1em;
+      font-weight: 700;
+      border-radius: 8px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .btn:hover {
+      background-color: #ffd700;
+      transform: translateY(-1px);
+    }
+
+    .back-link {
+      color: gold;
+      text-decoration: underline;
+      display: block;
+      margin-bottom: 20px;
+      font-size: 1.1em;
+      font-weight: 500;
+    }
+
+    .back-link:hover {
+      color: #ffd700;
+    }
+
+    .required {
+      color: #ff6b6b;
+    }
+
+    .form-description {
+      color: #fffbe7;
+      font-size: 1.1em;
+      line-height: 1.6;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    @media (max-width: 600px) {
+      .form-container {
+        padding: 30px 20px;
+        margin: 10px;
+      }
+      
+      h2 {
+        font-size: 1.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a class="back-link" href="index.html">&larr; Back to Home</a>
+  <div class="form-container">
+    <h2>Fleet Team Intake Form</h2>
+    
+    <div class="form-description">
+      Join our transportation team! Please complete this form to apply for fleet team positions.
+    </div>
+
+    <form id="fleetIntakeForm" name="fleet-intake" method="POST" action="YOUR_GOOGLE_APPS_SCRIPT_URL_HERE">
+      <div class="form-section">
+        <label for="firstName">First Name <span class="required">*</span></label>
+        <input type="text" id="firstName" name="First Name" required />
+      </div>
+
+      <div class="form-section">
+        <label for="lastName">Last Name <span class="required">*</span></label>
+        <input type="text" id="lastName" name="Last Name" required />
+      </div>
+
+      <div class="form-section">
+        <label for="email">Email Address <span class="required">*</span></label>
+        <input type="email" id="email" name="Email Address" required />
+      </div>
+
+      <div class="form-section">
+        <label for="phone">Phone Number <span class="required">*</span></label>
+        <input type="tel" id="phone" name="Phone Number" required />
+      </div>
+
+      <div class="form-section">
+        <label for="tsaCert">TSA Certification Status <span class="required">*</span></label>
+        <select id="tsaCert" name="TSA Certification Status" required>
+          <option value="">Select certification status</option>
+          <option value="Yes">Yes - I have TSA certification</option>
+          <option value="No">No - I do not have TSA certification</option>
+          <option value="In Progress">In Progress - Currently obtaining certification</option>
+        </select>
+      </div>
+
+      <div class="form-section">
+        <label for="twicCard">TWIC Card Status <span class="required">*</span></label>
+        <select id="twicCard" name="TWIC Card Status" required>
+          <option value="">Select TWIC card status</option>
+          <option value="Yes">Yes - I have a valid TWIC card</option>
+          <option value="No">No - I do not have a TWIC card</option>
+          <option value="Expired">Expired - Need to renew TWIC card</option>
+          <option value="In Progress">In Progress - Currently applying for TWIC card</option>
+        </select>
+      </div>
+
+      <input type="hidden" name="form-name" value="fleet-intake" />
+      <button class="btn" type="submit">Submit Fleet Team Application</button>
+    </form>
+  </div>
+</body>
+</html>
